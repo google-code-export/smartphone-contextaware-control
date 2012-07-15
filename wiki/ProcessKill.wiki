@@ -1,0 +1,24 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+http://blog.naver.com/PostView.nhn?blogId=huewu&logNo=110082677696
+
+
+1.메니페스트 파일에 RESTART_PACKAGES 권한을 사용한다고 선언한다.
+<uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+
+2.ActivityManager 의 restartPackage API 를 호출한다.
+ActivityManager am 
+             = (ActivityManager)getSystemService(ACTIVITY_SERVICE);
+am.restartPackage(getPackageName());
+[출처] 안드로이드 어플리케이션 Process 를 정말로 죽이는 방법|작성자 휴우
+
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
