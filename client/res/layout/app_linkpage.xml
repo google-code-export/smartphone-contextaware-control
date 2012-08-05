@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linkCheckLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="연결상태 : "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- 링크 체크박스 텍스트뷰 -->
+
+        <TextView
+            android:id="@+id/linkCheckText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.99"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- 재연결 버튼 -->
+
+        <Button
+            android:id="@+id/reStartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="재접속" />
+    </LinearLayout>
+
+<!-- 학생사진 이미지 -->    
+    <ImageView
+        android:id="@+id/studentImg"
+        android:layout_width="124dp"
+        android:layout_height="99dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linkCheckLayout"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/ic_action_search" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/studentImg"
+        android:layout_alignTop="@+id/studentImg"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/studentImg" >
+
+        <TextView
+            android:id="@+id/studentData"
+            android:layout_width="124dp"
+            android:layout_height="match_parent"
+            android:text=" "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </FrameLayout>
+
+</RelativeLayout>
