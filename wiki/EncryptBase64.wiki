@@ -1,0 +1,26 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
+
+public class TestCodecBase64 {
+	public static void main(String[] args) {
+		String txtPlain = "베이스64 인코딩, 디코딩 테스트입니다.";
+		String txtCipher = "";
+		System.out.println("Source String : " + txtPlain);
+
+		txtCipher = Base64.encode(txtPlain.getBytes());
+		System.out.println("Encode Base64 : " + txtCipher);
+
+		txtPlain = new String(Base64.decode(txtCipher));
+		System.out.println("Decode Base64 : " + txtPlain);
+	}
+}
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
