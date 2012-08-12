@@ -2,6 +2,12 @@
 
 = Introduction =
 
+Base64 인코딩, 디코딩
+
+
+= Details =
+
+{{{
 import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
 
 public class TestCodecBase64 {
@@ -17,8 +23,13 @@ public class TestCodecBase64 {
 		System.out.println("Decode Base64 : " + txtPlain);
 	}
 }
+}}}
 
-= Details =
+
+
+
+
+
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
