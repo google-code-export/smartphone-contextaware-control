@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp"
+        android:text="학번이름출력"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="60dp" >
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/qrStartBtn"
+        android:layout_width="162dp"
+        android:layout_height="148dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="qrStart"
+        android:src="@drawable/ic_action_search" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageButton1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" >
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qrStartBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="내정보" 
+        android:onClick="MyPageBtn"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="18dp" >
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="로그아웃" />
+    </FrameLayout>
+
+</RelativeLayout>
