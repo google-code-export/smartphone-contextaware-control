@@ -1,11 +1,18 @@
 package com.kcacelestia.managedapp.packet;
 
 public class Packet {
+	private String cmd;
 	private String regnum;
 	private String passwd;
 	private lecture lec;
 	private blacklist black;
 	
+	public String getCmd() {
+		return cmd;
+	}
+	public void setCmd(String cmd) {
+		this.cmd = cmd;
+	}
 	public String getRegnum() {
 		return regnum;
 	}
