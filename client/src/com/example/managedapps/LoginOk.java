@@ -30,7 +30,8 @@ public class LoginOk extends Activity {
 	WifiManager wifii;
 
 	public String temp_gateway = "192.168.0.1";
-	public String temp_serverAdress = "192.168.0.2"; //통상적으로 게이트웨이와 서버아이피는 같음.일반 가정에서도 가상ip를 통해 악용할수 있으니 보완이 시급
+	public String temp_serverAdress = "192.168.0.2"; 
+	//통상적으로 게이트웨이와 서버아이피는 같음.일반 가정에서도 가상ip를 통해 악용할수 있으니 보완이 시급
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -101,6 +102,17 @@ public class LoginOk extends Activity {
 
 	public String FormatIP(int IpAddress) {
 		return Formatter.formatIpAddress(IpAddress);
+	}
+	
+	
+	public void conBtn(View v){
+		Intent intent	=	new Intent(LoginOk.this, BackGroundControl.class);
+		startService(intent);
+	}
+	
+	public void btn2(View v){
+		Intent intent	=	new Intent(LoginOk.this, BackGroundControl.class);
+		stopService(intent);
 	}
 }
 

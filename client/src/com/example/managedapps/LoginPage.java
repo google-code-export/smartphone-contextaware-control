@@ -39,7 +39,7 @@ public class LoginPage extends Activity {
 			Intent loginOk = new Intent(this, LoginOk.class);
 			startActivity(loginOk);
 		} else {
-			Toast loginFalse = Toast.makeText(this, "ID �뱀� PW媛��ㅻ쫭�덈떎..",
+			Toast loginFalse = Toast.makeText(this, "ID 혹은 PW가 다릅니다..",
 					Toast.LENGTH_SHORT);
 			loginFalse.show();
 		}

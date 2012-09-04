@@ -146,6 +146,8 @@ versionName is 2.31, 2.4, or 3.0. -->
     </activity>
     <activity android:name="com.example.managedapps.LoginOk"></activity>
     <activity android:name="com.example.managedapps.ControlStart"></activity>
+    <service android:name="com.example.managedapps.BackGroundConteol"></service>
+    <service android:name="com.example.managedapps.BackGroundControl"></service>
   </application>
   <uses-permission android:name="android.permission.CAMERA"/>
   <uses-permission android:name="android.permission.READ_CONTACTS"/>

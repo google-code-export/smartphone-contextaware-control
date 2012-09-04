@@ -36,6 +36,14 @@
         android:layout_below="@+id/imageButton1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp" >
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="임시 서비스종료"
+            android:onClick="btn2"/>
+
     </FrameLayout>
 
     <Button
@@ -45,8 +53,8 @@
         android:layout_below="@+id/qrStartBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:text="내정보" 
-        android:onClick="MyPageBtn"/>
+        android:text="임시제어시작버튼" 
+        android:onClick="conBtn"/>
 
     <FrameLayout
         android:id="@+id/frameLayout2"
