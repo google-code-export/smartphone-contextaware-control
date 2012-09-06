@@ -1,11 +1,14 @@
 package com.kcacelestia.managedapp.packet;
 
+import java.util.List;
+
 public class Packet {
 	private String cmd;
 	private String regnum;
 	private String passwd;
-	private lecture lec;
-	private blacklist black;
+	private List<lecture> lec;
+	private List<blacklist> black;
+	private List<whitelist> white;
 	
 	public String getCmd() {
 		return cmd;
@@ -25,25 +28,25 @@ public class Packet {
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
 	}
-	public lecture getLec() {
+	public List<lecture> getLec() {
 		return lec;
 	}
-	public void setLec(lecture lec) {
+	public void setLec(List<lecture> lec) {
 		this.lec = lec;
 	}
-	public blacklist getBlack() {
+	public List<blacklist> getBlack() {
 		return black;
 	}
-	public void setBlack(blacklist black) {
+	public void setBlack(List<blacklist> black) {
 		this.black = black;
 	}
-	public whitelist getWhite() {
+	public List<whitelist> getWhite() {
 		return white;
 	}
-	public void setWhite(whitelist white) {
+	public void setWhite(List<whitelist> white) {
 		this.white = white;
 	}
-	private whitelist white;
+	
 }
 
 class lecture{
@@ -114,4 +117,4 @@ class whitelist{
 	}
 }
 
-//아 챠촌고자
+// 개놈아
