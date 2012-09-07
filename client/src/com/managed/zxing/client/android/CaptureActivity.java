@@ -16,6 +16,8 @@
 
 package com.managed.zxing.client.android;
 
+import com.example.managedapps.ControlStart;
+import com.example.managedapps.LoginOk;
 import com.managed.zxing.client.android.R;
 import com.managed.zxing.BarcodeFormat;
 import com.managed.zxing.Result;
@@ -487,13 +489,36 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         metaTextViewLabel.setVisibility(View.VISIBLE);
       }
     }
-
-    TextView contentsTextView = (TextView) findViewById(R.id.contents_text_view);
+    
+ //qr코드 검사하는곳   
+    String Url	=	"http://m.site.naver.com/03S2Z";
+ //	url 텍스트뷰 받아오기
+ // TextView contentsTextView = (TextView) findViewById(R.id.contents_text_view);
     CharSequence displayContents = resultHandler.getDisplayContents();
-    contentsTextView.setText(displayContents);
-    // Crudely scale betweeen 22 and 32 -- bigger font for shorter text
-    int scaledSize = Math.max(22, 32 - displayContents.length() / 4);
-    contentsTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, scaledSize);
+    
+    
+ //url 화면 출력 
+   // contentsTextView.setText(displayContents);
+    
+    //String contents_text_view	=	contentsTextView.getText().toString();
+ //url 검사
+	if (displayContents.equals(Url)) {
+		Intent intent = new Intent(this, ControlStart.class);
+		startActivity(intent);
+		finish();
+	} else {
+		Toast loginFalse = Toast.makeText(this, "qr코드가 다름니다.", Toast.LENGTH_SHORT);
+		loginFalse.show();
+		Intent intent2 = new Intent(this, LoginOk.class);
+		startActivity(intent2);
+		finish();
+	}
+    
+
+  // 여긴 뭔지 모르겠다 아마도 사이즈조절 및 위치 조절 같은데
+  // Crudely scale betweeen 22 and 32 -- bigger font for shorter text
+   int scaledSize = Math.max(22, 32 - displayContents.length() / 4);
+   //contentsTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, scaledSize);
 
     TextView supplementTextView = (TextView) findViewById(R.id.contents_supplement_text_view);
     supplementTextView.setText("");
@@ -502,8 +527,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         PreferencesActivity.KEY_SUPPLEMENTAL, true)) {
       SupplementalInfoRetriever.maybeInvokeRetrieval(supplementTextView, resultHandler.getResult(),
           handler, this);
-    }
-
+    }/* 
     int buttonCount = resultHandler.getButtonCount();
     ViewGroup buttonView = (ViewGroup) findViewById(R.id.result_button_view);
     buttonView.requestFocus();
@@ -517,11 +541,12 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         button.setVisibility(View.GONE);
       }
     }
+    //이곳은 qr스캔되고 나오는 버튼들
 
     if (copyToClipboard && !resultHandler.areContentsSecure()) {
       ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
       clipboard.setText(displayContents);
-    }
+    }*/
   }
 
   // Briefly show the contents of the barcode, then handle the result outside Barcode Scanner.

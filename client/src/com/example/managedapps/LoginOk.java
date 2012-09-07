@@ -40,6 +40,10 @@ public class LoginOk extends Activity {
 	}
 
 	public void qrStart(View v) {
+		
+		Intent qrIntent = new Intent(this, CaptureActivity.class);
+		startActivity(qrIntent);
+		/*
 		NetWorkChack();
 		dhcpInfo();
 
@@ -83,7 +87,7 @@ public class LoginOk extends Activity {
 			// Toast.LENGTH_LONG);
 			// NoNetwork.show();
 			return NoNet;
-		}
+		}*/
 	}
 
 	public void dhcpInfo() {

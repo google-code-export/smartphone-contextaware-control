@@ -19,6 +19,7 @@ public class MainPage extends Activity {
 	public void login_Page(View v){
 		Intent loginPageIntent	=	new Intent(this, LoginPage.class);
 		startActivity(loginPageIntent);
+		finish();
 	}
 	public void CloseBtn(View v){
 		moveTaskToBack(true);
